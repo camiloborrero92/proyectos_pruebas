@@ -1,0 +1,5 @@
+--Crear proyecto
+composer create-project laravel/laravel example-app
+
+-- Crear controlador
+php artisan make:controller HomeController
