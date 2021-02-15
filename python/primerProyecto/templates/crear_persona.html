@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block titulo %} Formulario Crear Persona {% endblock titulo %}
+{% block cuerpo %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit">Crear o Editar</button>
+</form>
+
+{% endblock cuerpo %}
