@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block titulo %}{% endblock titulo %} </title>
+</head>
+<body>
+     {% block cuerpo %}
+        <h1> Template de listado</h1>
+        <table border=1>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Proveedor</th>
+                    <th>Pais</th>
+                    <th>Fecha Ingreso</th>
+                    <th>Opcion</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in object_list %}
+                    <tr>
+                        <td>{{ producto.nombre_producto}}</td>
+                        <td>{{ producto.proveedor }}</td>
+                        <td>{{ producto.pais_proveedor }}</td>
+                        <td>{{ producto.fecha_ingreso }}</td>
+                        <td> 
+                            <a href="{% url 'editar_persona' persona.id %}">Editar</a> 
+                            <a href="{% url 'eliminar_persona' persona.id %}">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+     {% endblock cuerpo %}
+</body>
+</html>

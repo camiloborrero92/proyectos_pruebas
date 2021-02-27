@@ -32,3 +32,19 @@ from principal.models import Persona
 
 2 agregar al admin
 admin.site.register(Persona)
+
+****** Funciones con Listas *******
+cantantes = ['Cas','a232','ajfla']
+numeros = [1,3,4,5]
+
+cantantes.sort() => ordena la lista
+cantantes.append("aksk") => agrega de ultimo
+cantantes.insert(1,'asda') => agrega en posición especifica
+cantantes.pop(1) => elimina posición
+cantantes.remove("Cas") => elimina el indicado
+cantantes.reverse() => imprime del ultimo al primero
+print('Cas' in cantantes) => devuelve True si existe
+print(len(cantantes)) => cuenta elementos de la lista
+print(numeros.count(2)) => cuenta las veces que está un objeto en el aarray
+print(cantantes.index('Cas')) => devuelve el indice de un objeto del array
+cantantes.extend(numeros) => fusiona 2 arrays
